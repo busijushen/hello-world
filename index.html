@@ -1,25 +1,52 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>世界你好 - Github.io by busijushen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">世界你好 - Github.io</h1>
-      <h2 class="project-tagline">世界你好的技术博客</h2>
-      <a href="https://github.com/busijushen/hello-world" class="btn">View on GitHub</a>
-      <a href="https://github.com/busijushen/hello-world/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/busijushen/hello-world/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
 
-    <section class="main-content">
-      <p></p>
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>世界你好 - Github.io by busijushen</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/busijushen/hello-world">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>世界你好 - Github.io</h1>
+            <h2>世界你好的技术博客</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/busijushen/hello-world/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/busijushen/hello-world/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <p></p>
 
 <div>
     <div>
@@ -129,7 +156,7 @@
 <h2>
 <a id="非阻塞-iononblocking-io" class="anchor" href="#%E9%9D%9E%E9%98%BB%E5%A1%9E-iononblocking-io" aria-hidden="true"><span class="octicon octicon-link"></span></a>非阻塞 I/O（nonblocking IO）</h2>
 
-<p>linux下，可以通过设置socket使其变为non-blocking。当对一个non-blocking socket执行读操作时，流程是这个样子：<br><img src="/img/bVm1c4" alt="clipboard.png"></p>
+<p>linux下，可以通过设置socket使其变为non-blocking。当对一个non-blocking socket执行读操作时，流程是这个样子：<br><img src="http://segmentfault.com/img/bVm1c4" alt="clipboard.png"></p>
 
 <p>当用户进程发出read操作时，如果kernel中的数据还没有准备好，那么它并不会block用户进程，而是立刻返回一个error。从用户进程角度讲 ，它发起一个read操作后，并不需要等待，而是马上就得到了一个结果。用户进程判断结果是一个error时，它就知道数据还没有准备好，于是它可以再次发送read操作。一旦kernel中的数据准备好了，并且又再次收到了用户进程的system call，那么它马上就将数据拷贝到了用户内存，然后返回。</p>
 
@@ -142,7 +169,7 @@
 
 <p>IO multiplexing就是我们说的select，poll，epoll，有些地方也称这种IO方式为event driven IO。select/epoll的好处就在于单个process就可以同时处理多个网络连接的IO。它的基本原理就是select，poll，epoll这个function会不断的轮询所负责的所有socket，当某个socket有数据到达了，就通知用户进程。</p>
 
-<p><img src="/img/bVm1c5" alt="clipboard.png"></p>
+<p><img src="http://segmentfault.com/img/bVm1c5" alt="clipboard.png"></p>
 
 <p><code>当用户进程调用了select，那么整个进程会被block</code>，而同时，kernel会“监视”所有select负责的socket，当任何一个socket中的数据准备好了，select就会返回。这个时候用户进程再调用read操作，将数据从kernel拷贝到用户进程。</p>
 
@@ -159,7 +186,7 @@
 <h2>
 <a id="异步-ioasynchronous-io" class="anchor" href="#%E5%BC%82%E6%AD%A5-ioasynchronous-io" aria-hidden="true"><span class="octicon octicon-link"></span></a>异步 I/O（asynchronous IO）</h2>
 
-<p>inux下的asynchronous IO其实用得很少。先看一下它的流程：<br><img src="/img/bVm1c8" alt="clipboard.png"></p>
+<p>inux下的asynchronous IO其实用得很少。先看一下它的流程：<br><img src="http://segmentfault.com/img/bVm1c8" alt="clipboard.png"></p>
 
 <p>用户进程发起read操作之后，立刻就可以开始去做其它的事。而另一方面，从kernel的角度，当它受到一个asynchronous read之后，首先它会立刻返回，所以不会对用户进程产生任何block。然后，kernel会等待数据准备完成，然后将数据拷贝到用户内存，当这一切都完成之后，kernel会给用户进程发送一个signal，告诉它read操作完成了。</p>
 
@@ -184,7 +211,7 @@
 
 <p>而asynchronous IO则不一样，当进程发起IO 操作之后，就直接返回再也不理睬了，直到kernel发送一个信号，告诉进程说IO完成。在这整个过程中，进程完全没有被block。</p>
 
-<p><strong>各个IO Model的比较如图所示：</strong><br><img src="/img/bVm1c9" alt="clipboard.png"></p>
+<p><strong>各个IO Model的比较如图所示：</strong><br><img src="http://segmentfault.com/img/bVm1c9" alt="clipboard.png"></p>
 
 <p>通过上面的图片，可以发现non-blocking IO和asynchronous IO的区别还是很明显的。在non-blocking IO中，虽然进程大部分时间都不会被block，但是它仍然要求进程去主动的check，并且当数据准备完成以后，也需要进程主动的再次调用recvfrom来将数据拷贝到用户内存。而asynchronous IO则完全不同。它就像是用户进程将整个IO操作交给了他人（kernel）完成，然后他人做完后发信号通知。在此期间，用户进程不需要去检查IO操作的状态，也不需要主动的去拷贝数据。</p>
 
@@ -780,15 +807,22 @@ static void modify_event(int epollfd,int fd,int state){
 </div>
 </div>
 </div>
+      </section>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/busijushen/hello-world">世界你好 - Github.io</a> is maintained by <a href="https://github.com/busijushen">busijushen</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/busijushen">busijushen</a> can be found on <a href="https://github.com/busijushen/hello-world">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
       </footer>
 
-    </section>
+    </div>
 
-  
+    
   </body>
 </html>
