@@ -19,27 +19,26 @@
     </section>
 
     <section class="main-content">
-      <p></p>
-
-<div>
+      <div>
     <div>
         <div>
             <div>
                 <div>
                     <h1 id="articleTitle">
-<a id="-linux-io模式及-selectpollepoll详解" class="anchor" href="#-linux-io%E6%A8%A1%E5%BC%8F%E5%8F%8A-selectpollepoll%E8%AF%A6%E8%A7%A3" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="/a/1190000003063859"> Linux IO模式及 select、poll、epoll详解</a>
-</h1>
+<a id="linux-io模式及-selectpollepoll详解" class="anchor" href="#linux-io%E6%A8%A1%E5%BC%8F%E5%8F%8A-selectpollepoll%E8%AF%A6%E8%A7%A3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linux IO模式及 select、poll、epoll详解</h1>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div>
-        <div>
-            <div>
+<pre><code>        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;!-- end .post-topheader --&gt;
 
-                                                <div>
-                    
+&lt;div class="container mt30"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-xs-12 col-md-9 main"&gt;
+
+                                            &lt;div class="article fmt"&gt;
+</code></pre>
+
 <blockquote>
   <p>注：本文是对众多博客的学习和总结，可能存在理解错误。请带着怀疑的眼光，同时如果有错误希望能指出。</p>
 </blockquote>
@@ -478,304 +477,10 @@ static void modify_event(int epollfd,int fd,int state){
 <ol>
 <li>IO的效率不会随着监视fd的数量的增长而下降。epoll不同于select和poll轮询的方式，而是通过每个fd定义的回调函数来实现的。只有就绪的fd才会执行回调函数。</li>
 </ol>
+
 <blockquote>
   <p>如果没有大量的idle -connection或者dead-connection，epoll的效率并不会比select/poll高很多，但是当遇到大量的idle- connection，就会发现epoll的效率大大高于select/poll。</p>
 </blockquote>
-
-<h1>
-<a id="参考" class="anchor" href="#%E5%8F%82%E8%80%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>参考</h1>
-
-<p><a href="http://www.cnblogs.com/Anker/p/3269106.html">用户空间与内核空间，进程上下文与中断上下文[总结]</a><br><a href="http://guojing.me/linux-kernel-architecture/posts/process-switch/">进程切换</a><br><a href="https://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E6%8F%8F%E8%BF%B0%E7%AC%A6">维基百科-文件描述符</a><br><a href="http://www.ibm.com/developerworks/cn/linux/l-cn-directio/">Linux 中直接 I/O 机制的介绍</a><br><a href="http://blog.csdn.net/historyasamirror/article/details/5778378">IO - 同步，异步，阻塞，非阻塞 （亡羊补牢篇）</a><br><a href="http://www.cnblogs.com/bigwangdi/p/3182958.html">Linux中select poll和epoll的区别</a><br><a href="http://www.cnblogs.com/Anker/archive/2013/08/14/3258674.html">IO多路复用之select总结</a><br><a href="http://www.cnblogs.com/Anker/archive/2013/08/15/3261006.html">IO多路复用之poll总结</a><br><a href="http://www.cnblogs.com/Anker/archive/2013/08/17/3263780.html">IO多路复用之epoll总结</a></p>
-
-                </div>
-                                
-                <div>
-
-                    <ul>
-                                                <li><a href="/t/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E5%8F%91/blogs">服务器开发</a></li>
-                                                <li><a href="/t/linux/blogs">linux</a></li>
-                                            </ul>
-
-                </div>
-                <div>
-                    <ul>
-                        <li><a href="/a/1190000003063859">链接</a></li>
-                                                                                                <li>
-                            更多<b></b>
-                            <ul>
-                                <li><a href="#911">举报</a></li>
-                                                                                                                                                                                                        </ul>
-                        </li>
-                    </ul>
-                    <div>
-                        <div>
-</div>
-
-<pre><code>                &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class="text-center mt10"&gt;
-
-                &lt;button type="button" id="mainLike" data-id="1190000003063859" class="btn btn-success btn-lg mr10"&gt;
-                    5 推荐
-                &lt;/button&gt;
-
-                                &lt;button type="button" id="mainBookmark" data-type="article" data-id="1190000003063859" class="btn btn-default btn-lg "&gt;
-                    收藏
-                &lt;/button&gt;
-                            &lt;/div&gt;
-
-                            &lt;div class="article-license mb10 mt20 alert alert-info"&gt;
-                                    &lt;div class="license-item license-cc"&gt;
-                    本文由 &lt;a href="/u/rysy" class="alert-link"&gt;人云思云&lt;/a&gt; 创作，采用 &lt;a href="http://creativecommons.org/licenses/by/3.0/cn" target="_blank" class="alert-link"&gt;知识共享署名 3.0 中国大陆许可协议&lt;/a&gt;  进行许可。&lt;br&gt;可自由转载、引用，但需署名作者且注明文章出处。
-                &lt;/div&gt;
-
-            &lt;/div&gt;
-
-                            &lt;div class="recommend-post pt30 mt40 mb30 border-top"&gt;
-                &lt;h4 class="mt0"&gt;你可能感兴趣的文章&lt;/h4&gt;
-                &lt;ul class="widget-links list-unstyled"&gt;
-                                            &lt;li class="widget-links__item"&gt;
-                        &lt;a href="/a/1190000002965546" title="epoll 的使用"&gt;epoll 的使用&lt;/a&gt;
-                        &lt;small class="text-muted"&gt;
-                            7 收藏，350 浏览
-                        &lt;/small&gt;
-                    &lt;/li&gt;
-                                            &lt;li class="widget-links__item"&gt;
-                        &lt;a href="/a/1190000003786546" title="基于tornado的web ssh项目"&gt;基于tornado的web ssh项目&lt;/a&gt;
-                        &lt;small class="text-muted"&gt;
-                            35 浏览
-                        &lt;/small&gt;
-                    &lt;/li&gt;
-                                            &lt;li class="widget-links__item"&gt;
-                        &lt;a href="/a/1190000000361440" title="Day 15：Meteor —— 从零开始创建一个 Web 应用"&gt;Day 15：Meteor —— 从零开始创建一个 Web 应用&lt;/a&gt;
-                        &lt;small class="text-muted"&gt;
-                            23 收藏，13.5k 浏览
-                        &lt;/small&gt;
-                    &lt;/li&gt;
-                                        &lt;/ul&gt;
-            &lt;/div&gt;
-                            &lt;!-- &lt;ul class="list-unstyled text-muted mt30"&gt;
-                                    &lt;li&gt;上一篇：&lt;a href="/a/1190000002963465"&gt;闭包&lt;/a&gt;&lt;/li&gt;
-                                                        &lt;li class="mt5"&gt;下一篇：&lt;a href="/a/1190000003072237"&gt;MySQL日志管理&lt;/a&gt;&lt;/li&gt;
-                                &lt;/ul&gt; --&gt;
-
-            &lt;h2 class="h4 post-comment-title"&gt;讨论区&lt;/h2&gt;
-            &lt;div class="widget-comments" id="comment-1190000003063859" data-id="1190000003063859"&gt;
-    &lt;div class="widget-comments__item hover-show" id="1050000003075466"&gt;
-    &lt;div class="votes widget-vote"&gt;
-        &lt;button class="like" data-id="1050000003075466" type="button" data-do="like" data-type="comment"&gt;&lt;/button&gt;
-        &lt;span class="count"&gt;0&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class="comment-content wordbreak"&gt;
-                                &lt;div class="content fmt"&gt;
-</code></pre>
-
-<p>写得不错~！</p>
-
-<pre><code>        &lt;/div&gt;
-        &lt;p class="comment-meta"&gt;
-            &lt;a href="/c/1050000003075466" class="text-muted"&gt;#1&lt;/a&gt; &lt;a href="/u/zy0695354" class="commentUser" data-userid="1030000003058753" data-username="zy0695354" data-userslug="" data-useravatar="//static.segmentfault.com/global/img/user-40.png"&gt;
-                &lt;strong&gt;zy0695354&lt;/strong&gt;
-            &lt;/a&gt;
-            &amp;middot;
-            8月11日
-            &amp;middot;
-            &lt;a href="javascript:void(0);" class="commentReply" data-userid="1030000003058753" data-id="1050000003075466" data-username="zy0695354"&gt;回复&lt;/a&gt;
-
-            &lt;span class="pull-right commentTools hover-show-obj"&gt;
-                                                        &lt;a href="#911" class="ml10" data-toggle="modal" data-target="#911" data-type="comment" data-id="1050000003075466" data-typetext="评论" data-placement="top" title="举报"&gt;举报&lt;/a&gt;
-            &lt;/span&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                    &lt;a href="javascript:void(0);" class="comments showMoreComments" data-id="1190000003063859" data-target="#comment-1190000003063859"&gt;展开评论&lt;/a&gt;
-    &lt;div class="widget-comments__form row hidden"&gt;
-                                &lt;div class="col-md-12"&gt;
-                请先 &lt;a class="commentLogin" href="javascript:void(0);"&gt;登录&lt;/a&gt; 后评论
-            &lt;/div&gt;
-
-&lt;/div&gt;&lt;!-- /.widget-comments__form --&gt;
-&lt;/div&gt;&lt;!-- /.widget-comments --&gt;
-
-
-
-
-
-        &lt;/div&gt;&lt;!-- /.main --&gt;
-
-
-        &lt;div class="col-xs-12 col-md-3 side"&gt;
-            &lt;div class="sfad-sidebar"&gt;
-&lt;div class="sfad-item" data-adn="ad-1119908" id="adid-1119908"&gt;
-&lt;button class="close" type="button" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
-</code></pre>
-
-<p></p>
-</div>
-
-<p></p>
-</div>
-
-<pre><code>            &lt;div class="widget-box no-border"&gt;
-                &lt;p class="text-muted"&gt;本文隶属于专栏&lt;/p&gt;
-                &lt;h4 class="fz16"&gt;&lt;a href="/blog/rysy"&gt;人云思云&lt;/a&gt;&lt;/h4&gt;
-                &lt;p class="wordbreak"&gt;码农一只&lt;/p&gt;
-                                                    &lt;button type="button"
-                    class="btn btn-default follow-article"
-                    data-do="follow"
-                    data-type="blog"
-                    data-id="1200000002910292"&gt;关注专栏&lt;/button&gt;
-                                                &lt;/div&gt;
-
-
-
-            &lt;div class="post-nav hidden-xs"&gt;
-                &lt;div class="panel panel-default widget-outline"&gt;
-                    &lt;div class="panel-heading"&gt;文章目录&lt;/div&gt;
-                    &lt;div class="panel-body"&gt;
-                        &lt;div class="nav-body"&gt;
-                            &lt;div class="highlight-title"&gt;&lt;/div&gt;
-                            &lt;ul class="articleIndex"&gt;&lt;/ul&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;&lt;!-- /.side --&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-<p></p>
-</div>
-
-<div id="shareToWeiboModal">
-    <div>
-        <div>
-            <div>
-                
-                    ×Close
-                
-                <h4>
-<a id="分享" class="anchor" href="#%E5%88%86%E4%BA%AB" aria-hidden="true"><span class="octicon octicon-link"></span></a>分享</h4>
-            </div>
-            <div>
-                <p>
-                    分享到微博？
-                </p>
-            </div>
-            <div>
-                取消并且不再弹出
-                <a href="" id="shareLink" target="_blank">分享</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<pre><code>&lt;div class="hidden widget-register widget-welcome-question mt20 hidden-xs widget-welcome widget-register-slideUp"&gt;
-</code></pre>
-
-<div>
-    <div>
-        <div>
-            <h2>
-<a id="与我们一起探索更多的未知" class="anchor" href="#%E4%B8%8E%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E6%8E%A2%E7%B4%A2%E6%9B%B4%E5%A4%9A%E7%9A%84%E6%9C%AA%E7%9F%A5" aria-hidden="true"><span class="octicon octicon-link"></span></a>与我们一起探索更多的未知</h2>
-            <p>专业的开发者技术社区，为用户提供多样化的线上知识交流，丰富的线下活动及给力的工作机会</p>
-        </div>
-        
-            <div>
-                <div>
-                    
-                </div>
-            </div>
-            <div>
-                加入只需一步
-            </div>
-            <div>
-                <div>
-                    <div>
-                        
-                    </div>
-                    <div>
-                        <img src="" height="35">
-                    </div>
-                </div>
-            </div>
-        
-        ×
-    </div>
-</div>
-
-<p></p>
-</div>
-
-<div id="911">
-    <div>
-        <div>
-            <div>
-                ×Close
-                <h4>
-<a id="举报问题" class="anchor" href="#%E4%B8%BE%E6%8A%A5%E9%97%AE%E9%A2%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>举报问题</h4>
-            </div>
-
-<pre><code>        &lt;div class="modal-body"&gt;
-            &lt;p class="alert alert-warning" id="J_returnMsg" style="display:none"&gt;&lt;/p&gt;
-            &lt;p&gt;&lt;strong class="required"&gt;举报理由：&lt;/strong&gt;&lt;/p&gt;
-            &lt;div id="reportDescription"&gt;
-            &lt;div class="radio-911 radio all"&gt;
-                &lt;label&gt;
-                    &lt;input type="radio" name="descRadio" checked value="推广（招聘、广告、SEO 等）方面的内容"&gt;
-                    推广（招聘、广告、SEO 等）方面的内容
-                &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="radio-911 radio all"&gt;
-                &lt;label&gt;
-                    &lt;input type="radio" name="descRadio" value="带有人身攻击、辱骂、仇恨等违反条款的内容"&gt;
-                    带有人身攻击、辱骂、仇恨等违反条款的内容
-                &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="radio-911 radio question-only"&gt;
-                &lt;label&gt;
-                    &lt;input type="radio" name="descRadio" value="与已有问题重复"&gt;
-                    与已有问题重复（请编辑该提问指向已有相同问题）
-                &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="radio-911 radio all"&gt;
-                &lt;label&gt;
-                    &lt;input type="radio" name="descRadio" value="不友善内容"&gt;
-                    不友善内容
-                &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="radio-911 radio answer-only"&gt;
-                &lt;label&gt;
-                    &lt;input type="radio" name="descRadio" value="答非所问，不符合答题要求"&gt;
-                    答非所问，不符合答题要求
-                &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="radio-911 radio all" id="btwRadio"&gt;
-                &lt;label&gt;
-                    &lt;input type="radio" name="descRadio" value=""&gt;
-                    其他原因（请补充说明）
-                &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="hide btw"&gt;
-                &lt;p class="mt20"&gt;&lt;strong&gt;补充说明：&lt;/strong&gt;&lt;/p&gt;
-                &lt;textarea class="form-control" rows="3" autocomplete="false" id="911Desc"&gt;&lt;/textarea&gt;
-            &lt;/div&gt;
-                            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="modal-footer"&gt;
-            &lt;button type="button" class="btn btn-default" data-dismiss="modal"&gt;取消&lt;/button&gt;
-            &lt;button type="button" id="911Submit" class="btn btn-primary"&gt;提交&lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;&lt;!-- /.modal-content --&gt;
-&lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
-</code></pre>
-
-<p></p>
-</div>&lt;!-- /.modal --&gt;
-
-<p></p>
 </div>
 </div>
 </div>
